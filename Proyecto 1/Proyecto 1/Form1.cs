@@ -48,5 +48,15 @@ namespace Proyecto_1
                 txt_entrada.Text = "Error";
             }
         }
+
+        private void btn_raiz_cuadrada_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_historial_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
