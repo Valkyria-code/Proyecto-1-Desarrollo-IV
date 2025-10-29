@@ -69,6 +69,12 @@ namespace Proyecto_1
                         adapter.Fill(dt);
 
                         dgv_historial.DataSource = dt;
+
+                        if (dgv_historial.Columns.Count > 0)
+                        {
+                            dgv_historial.Columns["Operacion"].HeaderText = "Operación";
+                            dgv_historial.Columns["Resultado"].HeaderText = "Resultado";
+                        }
                     }
                 }
             }
@@ -125,7 +131,7 @@ namespace Proyecto_1
             }
             else
             {
-                this.Width = 676;
+                this.Width = 632;
                 CargarHistorial();
 
                 dgv_historial.Visible = true;

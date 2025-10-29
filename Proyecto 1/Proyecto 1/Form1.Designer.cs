@@ -342,14 +342,14 @@
             this.dgv_historial.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_historial.Location = new System.Drawing.Point(347, 21);
             this.dgv_historial.Name = "dgv_historial";
-            this.dgv_historial.Size = new System.Drawing.Size(289, 440);
+            this.dgv_historial.Size = new System.Drawing.Size(246, 440);
             this.dgv_historial.TabIndex = 26;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(660, 487);
+            this.ClientSize = new System.Drawing.Size(616, 487);
             this.Controls.Add(this.dgv_historial);
             this.Controls.Add(this.txt_entrada);
             this.Controls.Add(this.btn_clear_entry);
