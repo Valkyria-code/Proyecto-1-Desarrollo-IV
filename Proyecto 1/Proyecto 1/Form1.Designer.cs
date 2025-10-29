@@ -50,7 +50,7 @@
             this.btn_abre_parentesis = new System.Windows.Forms.Button();
             this.btn_8 = new System.Windows.Forms.Button();
             this.btn_4 = new System.Windows.Forms.Button();
-            this.btn_elevar = new System.Windows.Forms.Button();
+            this.btn_potencia = new System.Windows.Forms.Button();
             this.btn_historial = new System.Windows.Forms.Button();
             this.btn_clear_entry = new System.Windows.Forms.Button();
             this.txt_entrada = new System.Windows.Forms.TextBox();
@@ -111,6 +111,7 @@
             this.btn_clear.TabIndex = 4;
             this.btn_clear.Text = "C";
             this.btn_clear.UseVisualStyleBackColor = true;
+            this.btn_clear.Click += new System.EventHandler(this.btn_clear_Click);
             // 
             // btn_cuadrado
             // 
@@ -230,6 +231,7 @@
             this.btn_ans.TabIndex = 15;
             this.btn_ans.Text = "Ans";
             this.btn_ans.UseVisualStyleBackColor = true;
+            this.btn_ans.Click += new System.EventHandler(this.btn_ans_Click);
             // 
             // btn_punto
             // 
@@ -255,11 +257,12 @@
             // 
             // btn_raiz_cuadrada
             // 
+            this.btn_raiz_cuadrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_raiz_cuadrada.Location = new System.Drawing.Point(190, 169);
             this.btn_raiz_cuadrada.Name = "btn_raiz_cuadrada";
             this.btn_raiz_cuadrada.Size = new System.Drawing.Size(47, 46);
             this.btn_raiz_cuadrada.TabIndex = 18;
-            this.btn_raiz_cuadrada.Text = "button19";
+            this.btn_raiz_cuadrada.Text = "√";
             this.btn_raiz_cuadrada.UseVisualStyleBackColor = true;
             this.btn_raiz_cuadrada.Click += new System.EventHandler(this.btn_raiz_cuadrada_Click);
             // 
@@ -272,7 +275,7 @@
             this.btn_abre_parentesis.TabIndex = 19;
             this.btn_abre_parentesis.Text = "(";
             this.btn_abre_parentesis.UseVisualStyleBackColor = true;
-            this.btn_abre_parentesis.Click += new System.EventHandler(this.AgregarDigito);
+            this.btn_abre_parentesis.Click += new System.EventHandler(this.btn_abre_parentesis_Click);
             // 
             // btn_8
             // 
@@ -296,16 +299,16 @@
             this.btn_4.UseVisualStyleBackColor = true;
             this.btn_4.Click += new System.EventHandler(this.AgregarDigito);
             // 
-            // btn_elevar
+            // btn_potencia
             // 
-            this.btn_elevar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.btn_elevar.Location = new System.Drawing.Point(29, 167);
-            this.btn_elevar.Name = "btn_elevar";
-            this.btn_elevar.Size = new System.Drawing.Size(47, 48);
-            this.btn_elevar.TabIndex = 22;
-            this.btn_elevar.Text = "^";
-            this.btn_elevar.UseVisualStyleBackColor = true;
-            this.btn_elevar.Click += new System.EventHandler(this.AgregarDigito);
+            this.btn_potencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.btn_potencia.Location = new System.Drawing.Point(29, 167);
+            this.btn_potencia.Name = "btn_potencia";
+            this.btn_potencia.Size = new System.Drawing.Size(47, 48);
+            this.btn_potencia.TabIndex = 22;
+            this.btn_potencia.Text = "^";
+            this.btn_potencia.UseVisualStyleBackColor = true;
+            this.btn_potencia.Click += new System.EventHandler(this.btn_clear_Click);
             // 
             // btn_historial
             // 
@@ -354,7 +357,7 @@
             this.Controls.Add(this.txt_entrada);
             this.Controls.Add(this.btn_clear_entry);
             this.Controls.Add(this.btn_historial);
-            this.Controls.Add(this.btn_elevar);
+            this.Controls.Add(this.btn_potencia);
             this.Controls.Add(this.btn_4);
             this.Controls.Add(this.btn_8);
             this.Controls.Add(this.btn_abre_parentesis);
@@ -410,7 +413,7 @@
         private System.Windows.Forms.Button btn_abre_parentesis;
         private System.Windows.Forms.Button btn_8;
         private System.Windows.Forms.Button btn_4;
-        private System.Windows.Forms.Button btn_elevar;
+        private System.Windows.Forms.Button btn_potencia;
         private System.Windows.Forms.Button btn_historial;
         private System.Windows.Forms.Button btn_clear_entry;
         private System.Windows.Forms.TextBox txt_entrada;

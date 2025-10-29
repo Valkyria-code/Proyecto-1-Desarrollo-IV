@@ -18,6 +18,8 @@ namespace Proyecto_1
 
         private bool historialVisible = false;
 
+        private string resultadoAns = "0";
+
         public Form1()
         {
             InitializeComponent();
@@ -92,7 +94,7 @@ namespace Proyecto_1
 
         private void btn_clear_entry_Click(object sender, EventArgs e)
         {
-            txt_entrada.Clear();
+            
         }
 
         private void btn_igual_Click(object sender, EventArgs e)
@@ -100,9 +102,14 @@ namespace Proyecto_1
             try
             {
                 string operacion = txt_entrada.Text;
+                string operacionParaCalcular = operacion;
 
-                var resultado = new System.Data.DataTable().Compute(operacion, null);
+                operacionParaCalcular = ProcesarRaices(operacionParaCalcular);
+
+                var resultado = new System.Data.DataTable().Compute(operacionParaCalcular, null);
                 string resultadoTexto = resultado.ToString();
+
+                resultadoAns = resultadoTexto;
 
                 txt_entrada.Text = resultadoTexto;
 
@@ -117,7 +124,37 @@ namespace Proyecto_1
 
         private void btn_raiz_cuadrada_Click(object sender, EventArgs e)
         {
+            txt_entrada.Text += "√(";
+        }
 
+        private string ProcesarRaices(string expresion)
+        {
+            while (expresion.Contains("√("))
+            {
+                int inicio = expresion.IndexOf("√(");
+                int contadorParentesis = 1;
+                int fin = inicio + 2;
+
+                // Encontrar el paréntesis de cierre correspondiente
+                while (fin < expresion.Length && contadorParentesis > 0)
+                {
+                    if (expresion[fin] == '(') contadorParentesis++;
+                    if (expresion[fin] == ')') contadorParentesis--;
+                    fin++;
+                }
+
+                // Extraer el contenido dentro de √(...)
+                string contenido = expresion.Substring(inicio + 2, fin - inicio - 3);
+
+                // Calcular la raíz del contenido
+                var resultadoContenido = new System.Data.DataTable().Compute(contenido, null);
+                double raiz = Math.Sqrt(Convert.ToDouble(resultadoContenido));
+
+                // Reemplazar √(...) con el resultado
+                expresion = expresion.Substring(0, inicio) + raiz.ToString() + expresion.Substring(fin);
+            }
+
+            return expresion;
         }
 
         private void btn_historial_Click(object sender, EventArgs e)
@@ -137,6 +174,21 @@ namespace Proyecto_1
                 dgv_historial.Visible = true;
                 historialVisible = true;
             }
+        }
+
+        private void btn_clear_Click(object sender, EventArgs e)
+        {
+            txt_entrada.Clear();
+        }
+
+        private void btn_abre_parentesis_Click(object sender, EventArgs e)
+        {
+            txt_entrada.Text += "*(";
+        }
+
+        private void btn_ans_Click(object sender, EventArgs e)
+        {
+            txt_entrada.Text += resultadoAns;
         }
     }
 }
