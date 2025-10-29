@@ -71,12 +71,12 @@
             // 
             // btn_menos
             // 
-            this.btn_menos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_menos.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_menos.Location = new System.Drawing.Point(271, 287);
             this.btn_menos.Name = "btn_menos";
             this.btn_menos.Size = new System.Drawing.Size(47, 55);
             this.btn_menos.TabIndex = 1;
-            this.btn_menos.Text = "—";
+            this.btn_menos.Text = "-";
             this.btn_menos.UseVisualStyleBackColor = true;
             this.btn_menos.Click += new System.EventHandler(this.AgregarDigito);
             // 
