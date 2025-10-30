@@ -1,22 +1,18 @@
-# 🧮 Proyecto #1 – Aplicación Calculadora
+# 📊 Calculadora Científica - Windows Forms
+
+Aplicación de calculadora desarrollada en C# con Windows Forms que permite realizar operaciones matemáticas básicas y avanzadas, con almacenamiento de historial en base de datos SQL Server.
+
+## 👥 Integrantes del Grupo
+- Valerie De Gracia
+- Estefany Zambrano
+
+### Otras Especificaciones
 
 - Materia: Desarrollo de Software IV
 - Profesor: Regis Rivera
 - IDE: Visual Studio .NET 2022
 - Lenguaje: C# (Windows Forms)
 - Base de Datos: Microsoft SQL Server
-
-# 📊 Calculadora Científica - Windows Forms
-
-Aplicación de calculadora desarrollada en C# con Windows Forms que permite realizar operaciones matemáticas básicas y avanzadas, con almacenamiento de historial en base de datos SQL Server.
-
-## 👥 Integrantes del Grupo
-- [Nombre del Integrante 1]
-- [Nombre del Integrante 2]
-
-**Curso:** Desarrollo de Software IV  
-**Profesor:** Regis Rivera  
-**Proyecto:** #1 - Aplicaciones Windows Forms con C#
 
 ---
 
@@ -33,7 +29,6 @@ Aplicación de calculadora desarrollada en C# con Windows Forms que permite real
 - ✅ Elevar al cuadrado (x²)
 - ✅ Raíz cuadrada (√x)
 - ✅ Raíz n-ésima (ⁿ√x)
-- ✅ Porcentajes (%)
 
 ### Funcionalidades Adicionales
 - ✅ Soporte para números negativos
@@ -80,69 +75,12 @@ CREATE TABLE Historial (
 
 ---
 
-## 🛠️ Tecnologías Utilizadas
-
-- **Lenguaje:** C# (.NET Framework)
-- **IDE:** Visual Studio 2022
-- **Framework:** Windows Forms
-- **Base de Datos:** Microsoft SQL Server
-- **ORM:** ADO.NET (SqlClient)
-
----
-
 ## 📋 Requisitos Previos
 
 1. **Visual Studio 2022** o superior
 2. **SQL Server** (cualquier versión: Express, Developer, etc.)
 3. **.NET Framework 4.7.2** o superior
 4. **SQL Server Management Studio (SSMS)** - Opcional para administración de BD
-
----
-
-## 🚀 Instalación y Configuración
-
-### 1. Clonar el Repositorio
-```bash
-git clone [URL_DEL_REPOSITORIO]
-cd Proyecto_1
-```
-
-### 2. Configurar la Base de Datos
-
-#### Opción A: Usando SSMS
-1. Abrir SQL Server Management Studio
-2. Conectarse a tu instancia de SQL Server
-3. Ejecutar el script de creación de la base de datos (ver sección "Script de Creación")
-
-#### Opción B: Desde Visual Studio
-1. Abrir **Server Explorer**
-2. Crear nueva conexión a SQL Server
-3. Ejecutar el script SQL proporcionado
-
-### 3. Configurar la Cadena de Conexión
-
-Editar el archivo `Form1.cs` y modificar la cadena de conexión según tu configuración:
-```csharp
-string connectionString = @"Server=.;Database=Calculadora;TrustServerCertificate=true;Integrated Security=SSPI;";
-```
-
-**Ejemplos de cadenas de conexión:**
-
-- **SQL Server Express local:**
-```
-  Server=.\SQLEXPRESS;Database=Calculadora;Integrated Security=True;
-```
-
-- **Con usuario y contraseña:**
-```
-  Server=localhost;Database=Calculadora;User Id=tu_usuario;Password=tu_contraseña;
-```
-
-### 4. Compilar y Ejecutar
-
-1. Abrir `Proyecto_1.sln` en Visual Studio 2022
-2. Restaurar paquetes NuGet si es necesario
-3. Presionar **F5** o clic en **Iniciar** para ejecutar
 
 ---
 
@@ -186,14 +124,6 @@ Ejemplo: 2^3 = 8
 4. Presiona =
 ```
 
-#### Porcentajes
-```
-Ejemplo: 100+20% = 120
-1. Ingresa 100+20
-2. Presiona el botón %
-3. Presiona =
-```
-
 ### Historial
 - Presiona el botón **Historial** para expandir la ventana
 - Visualiza todas las operaciones realizadas
@@ -219,19 +149,6 @@ Almacena cada operación realizada en la base de datos SQL Server.
 
 #### `CargarHistorial()`
 Recupera y muestra todas las operaciones guardadas en el DataGridView.
-
----
-
-## 📸 Capturas de Pantalla
-
-### Calculadora - Vista Normal
-![Calculadora Normal](screenshots/calculadora-normal.png)
-
-### Calculadora - Vista con Historial
-![Calculadora con Historial](screenshots/calculadora-historial.png)
-
-### Base de Datos
-![Base de Datos](screenshots/database.png)
 
 ---
 
@@ -275,14 +192,6 @@ La aplicación utiliza un enfoque híbrido para evaluar expresiones matemáticas
 
 ---
 
-## 📚 Referencias
-
-- [Documentación de Windows Forms](https://docs.microsoft.com/en-us/dotnet/desktop/winforms/)
-- [ADO.NET SqlClient](https://docs.microsoft.com/en-us/dotnet/api/system.data.sqlclient)
-- [DataTable.Compute Method](https://docs.microsoft.com/en-us/dotnet/api/system.data.datatable.compute)
-
----
-
 ## 📄 Licencia
 
 Este proyecto fue desarrollado con fines académicos para el curso de Desarrollo de Software IV.
@@ -293,9 +202,7 @@ Este proyecto fue desarrollado con fines académicos para el curso de Desarrollo
 
 Proyecto desarrollado en colaboración por ambos integrantes del grupo mediante GitHub.
 
-**Historial de Commits:** [Ver en GitHub](enlace-a-commits)
-
 ---
 
-**Fecha de Entrega:** [Fecha]  
-**Universidad:** [Nombre de la Universidad]
+**Fecha de Entrega:** 10/29/2025  
+**Universidad:** Universidad Tecnológica de Panamá
